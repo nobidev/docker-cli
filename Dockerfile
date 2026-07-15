@@ -8,7 +8,7 @@ ARG BASE_VARIANT=alpine
 ARG ALPINE_VERSION=3.23
 ARG BASE_DEBIAN_DISTRO=bookworm
 
-ARG GO_VERSION=1.26.1
+ARG GO_VERSION=1.26.2
 
 # XX_VERSION specifies the version of the xx utility to use.
 # It must be a valid tag in the docker.io/tonistiigi/xx image repository.
@@ -25,12 +25,12 @@ ARG GOTESTSUM_VERSION=v1.13.0
 # BUILDX_VERSION sets the version of buildx to use for the e2e tests.
 # It must be a tag in the docker.io/docker/buildx-bin image repository
 # on Docker Hub.
-ARG BUILDX_VERSION=0.31.1
+ARG BUILDX_VERSION=0.33.0
 
 # COMPOSE_VERSION is the version of compose to install in the dev container.
 # It must be a tag in the docker.io/docker/compose-bin image repository
 # on Docker Hub.
-ARG COMPOSE_VERSION=v5.1.0
+ARG COMPOSE_VERSION=v5.1.3
 
 FROM --platform=$BUILDPLATFORM tonistiigi/xx:${XX_VERSION} AS xx
 
